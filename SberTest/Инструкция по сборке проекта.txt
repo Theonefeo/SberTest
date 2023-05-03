@@ -1,0 +1,27 @@
+Для запуска проекта нужно: 
+1) Установить СУБД PostgreSQL и назначить пароль на суперпользователя - postgres
+2) После установки нужно инициализировать пользователя и БД. Для этого:
+	2.1) С помощью команды  sudo -u postgres createuser --interactive --password user1 создадим нового пользователя user1. Назначаем пароль на нового пользователя именно таким : user1.
+	Будут вопросы: назначить ли роль суперпользователя, дать ли возможность новому пользователю создавать БД и создавать другие роли. Здесь отвечаем по желанию, но лучше на все отвечать нет, кроме возможности создавать БД пользователю user1.   
+	2.2) Создаем БД: sudo -u postgres createdb sberdb -O user1
+	2.3) Подключаемся к БД: sudo -u postgres psql sberdb и назначаем пароль пользователю ALTER USER user1 with encrypted password 'user1';
+
+Далее. Собираем проект с помощью maven:
+1) Заходим через консоль в папку с проектом.
+2) Запаковываем приложение в jar - архив и запускаем его командой:
+sudo ./mvnw package && java -jar target/SberTest-0.0.1-SNAPSHOT.jar
+Теперь можем работать в нашем приложении через браузер по адресу http://localhost:8080/core-api/logs
+Документация по проекту доступна на: http://localhost:8080/core-api/swagger-ui/index.html#/ и http://localhost:8080/core-api/v3/api-docs
+Endpoint healthcheck можно посмотреть по ссылке http://localhost:8080/core-api/actuator
+
+
+Наш maven проект подготовлен для контейнеризации. Для этого мы сделали:
+3) В папке с проектом создан Dockerfile. В нем прописано: 
+FROM adoptopenjdk/openjdk11:alpine-jre  
+ARG JAR_FILE=target/SberTest-0.0.1-SNAPSHOT.jar  
+WORKDIR ./fordocker  
+COPY ${JAR_FILE} app.jar  
+ENTRYPOINT ["java","-jar","app.jar"]  
+
+4) Чтобы собрать образ контейнера, используем команду: 
+docker build -t sbertest:0.0.1 .

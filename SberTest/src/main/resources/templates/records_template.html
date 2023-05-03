@@ -9,7 +9,7 @@
 <h1>Log record:</h1>
 
 
-<form id = "myForm">
+<form id="myForm" onsubmit="return onSubmit();">
   <fieldset>
     <legend>Log rec</legend>
 
@@ -44,7 +44,7 @@
                       type
                   </th>
               </tr>
-              <tr th:each="r : ${record}">
+              <tr th:each="r : ${records}">
                   <td>
                       <div th:text="${r.id}">
                       </div>

@@ -1,0 +1,24 @@
+2023-05-03 14:23:43.947  INFO 143642 --- [main] demo.SberTest.DemoApplication            : Starting DemoApplication v0.0.1-SNAPSHOT using Java 11.0.18 on feodorPC with PID 143642 (/home/feodor/LinuxProgramming/github/SBER/SbetTest/SberTest/target/SberTest-0.0.1-SNAPSHOT.jar started by feodor in /home/feodor/LinuxProgramming/github/SBER/SbetTest/SberTest)
+2023-05-03 14:23:43.951  INFO 143642 --- [main] demo.SberTest.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-05-03 14:23:45.057  INFO 143642 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-03 14:23:45.103  INFO 143642 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2023-05-03 14:23:45.708  INFO 143642 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-03 14:23:45.720  INFO 143642 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-03 14:23:45.721  INFO 143642 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-05-03 14:23:45.807  INFO 143642 --- [main] o.a.c.c.C.[.[localhost].[/core-api]      : Initializing Spring embedded WebApplicationContext
+2023-05-03 14:23:45.807  INFO 143642 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1803 ms
+2023-05-03 14:23:46.112  INFO 143642 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-03 14:23:46.164  INFO 143642 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-05-03 14:23:46.332  INFO 143642 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-03 14:23:46.430  INFO 143642 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-03 14:23:46.668  INFO 143642 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-03 14:23:46.687  INFO 143642 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-05-03 14:23:47.201  INFO 143642 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-03 14:23:47.225  INFO 143642 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 14:23:47.605  WARN 143642 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-03 14:23:48.633  INFO 143642 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-03 14:23:48.676  INFO 143642 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/core-api'
+2023-05-03 14:23:48.690  INFO 143642 --- [main] demo.SberTest.DemoApplication            : Started DemoApplication in 5.22 seconds (JVM running for 5.657)
+2023-05-03 14:23:53.038  INFO 143642 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/core-api]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-03 14:23:53.039  INFO 143642 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-03 14:23:53.041  INFO 143642 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms

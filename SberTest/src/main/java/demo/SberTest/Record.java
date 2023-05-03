@@ -70,4 +70,10 @@ public class Record {
 	public void setTime(LocalTime time) {
 		this.time = time;
 	}
+
+    @Override
+    public String toString() {
+        return "Record [id=" + id + ", message=" + message + ", type=" + type + ", level=" + level + ", time=" + time
+                + "]";
+    }
 }

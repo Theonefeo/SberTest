@@ -1,0 +1,5 @@
+sudo -u postgres dropdb sberdb
+sudo -u postgres dropuser user1 -e
+
+python3 /home/user/.local/lib/python3.8/site-packages/pgadmin4/pgAdmin4.py
+http://127.0.0.1:5050/browser/

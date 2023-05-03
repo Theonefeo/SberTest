@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Log record</title>
+</head>
+<body>
+
+<h1>Log record:</h1>
+
+
+<form id="myForm" onsubmit="return onSubmit();">
+  <fieldset>
+    <legend>Log rec</legend>
+
+	<p><label for="message">Message <em></em></label><input type="text" name="message"></p>
+    <p><label for="type">Type <em></em></label><input type="text" name="type"></p>
+    <p><label for="level">Level <em></em></label><input type="text" name="level"></p>
+	<p><label for="time">Time <em></em></label><input type="time" name="time"></p>
+  </fieldset>
+<p><input type="submit" value="Отправить"></p>
+<script src="form-handler.js" type="text/javascript"></script>
+</form>
+
+
+<h2 align="center">
+              Таблица логов
+          </h2>
+          <table border="1">
+              <tr>
+                  <th>
+                      id_log
+                  </th>
+                  <th>
+                      level
+                  </th>
+                  <th>
+                      message
+                  </th>
+                  <th>
+                      time
+                  </th>
+                  <th>
+                      type
+                  </th>
+              </tr>
+              <tr th:each="r : ${records}">
+                  <td>
+                      <div th:text="${r.id}">
+                      </div>
+                  </td>
+                  <td th:text="${r.message}">
+                  </td>
+                  <td th:text="${r.type}">
+                  </td>
+                  <td th:text="${r.level}">
+                  </td>
+                  <td th:text="${r.time}">
+                  </td>
+              </tr>
+          </table>
+<p></p>
+
+</body>
+</html>
